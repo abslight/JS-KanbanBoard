@@ -30,9 +30,9 @@ const create_item = () => {
   let input = document.createElement('input');
   item.appendChild(input);
 
-  let saveButton = document.createElement('button');
-  saveButton.innerHTML = 'Save';
-  saveButton.addEventListener('click', () => {
+  let save_btn = document.createElement('button');
+  save_btn.innerHTML = 'Save';
+  save_btn.addEventListener('click', () => {
     error.innerHTML = '';
     if (input.value !== '') {
       order += 1;
@@ -42,7 +42,7 @@ const create_item = () => {
       error.innerHTML = message;
     }
   });
-  item.appendChild(saveButton);
+  item.appendChild(save_btn);
 
   return item;
 };
